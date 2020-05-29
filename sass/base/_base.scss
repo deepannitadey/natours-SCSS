@@ -1,0 +1,15 @@
+/* Use a universal selector */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  // This defines what 1rem is
+  font-size: 62.54;
+}
+body {
+  box-sizing: border-box;
+}
