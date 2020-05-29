@@ -40,26 +40,24 @@ body {
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 60px; }
-
-.heading-primary-main {
-  display: block;
-  font-size: 60px;
-  font-weight: 400;
-  letter-spacing: 35px;
-  animation-name: moveInLeft;
-  animation-duration: 1s;
-  /* animation-delay: 3s;
-    animation-iteration-count: 3s; */
-  animation-timing-function: ease-out; }
-
-.heading-primary-sub {
-  display: block;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 17.4px;
-  animation-name: moveInRight;
-  animation-duration: 1s;
-  animation-timing-function: ease-in; }
+  .heading-primary--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    /* animation-delay: 3s;
+      animation-iteration-count: 3s; */
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
 
 @keyframes moveInLeft {
   0% {
@@ -81,8 +79,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
@@ -91,17 +88,22 @@ body {
   position: relative;
   transition: all 0.2s; }
 
-.btn-white {
-  background-color: #fff;
-  color: #777; }
-
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
+
+.btn--white {
+  background-color: #fff;
+  color: #777; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -115,12 +117,9 @@ body {
   z-index: -1;
   transition: all 0.4s; }
 
-.btn-white::after {
-  background-color: #fff; }
-
-.btn-white::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0; }
+.btn--animated {
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards; }
 
 @keyframes moveInBottom {
   0% {
@@ -129,7 +128,3 @@ body {
   100% {
     opacity: 1;
     transform: translate(0); } }
-
-.btn-animated {
-  animation: moveInBottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards; }
