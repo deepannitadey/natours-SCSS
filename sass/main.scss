@@ -34,21 +34,22 @@ body {
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-}
-&_logo-box {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-}
-&_logo {
-  height: 35px;
-}
-&_textbox {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+
+  &_logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+  }
+  &_logo {
+    height: 35px;
+  }
+  &_textbox {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 .heading-primary {
   color: $color-white;
