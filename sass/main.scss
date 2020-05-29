@@ -1,6 +1,10 @@
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
 /* Use a universal selector */
 * {
   margin: 0;
@@ -15,7 +19,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
-  color: #777;
+  color: $color-grey-dark;
   padding: 30px;
 }
 .header {
@@ -47,7 +51,7 @@ body {
   text-align: center;
 }
 .heading-primary {
-  color: #fff;
+  color: $color-white;
   text-transform: uppercase;
   backface-visibility: hidden;
   margin-bottom: 60px;
@@ -109,17 +113,17 @@ body {
   transition: all 0.2s;
 }
 .btn-white {
-  background-color: #fff;
-  color: #777;
+  background-color: $color-white;
+  color: $color-grey-dark;
 }
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba($color-black, 0.2);
 }
 .btn:active {
   transform: translateY(-1px);
 
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba($color-black, 0.2);
 }
 .btn::after {
   content: "";
@@ -134,7 +138,7 @@ body {
   transition: all 0.4s;
 }
 .btn-white::after {
-  background-color: #fff;
+  background-color: $color-white;
 }
 .btn-white::after {
   transform: scaleX(1.4) scaleY(1.6);
